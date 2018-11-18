@@ -21,7 +21,7 @@
     methods:{
       changeTitle:function () {
         // this.title="changed"
-        this.$emit("titleChange","子向父组件传值")//注册
+        this.$emit("titleChange","子向父组件传值")
       }
     }
 
