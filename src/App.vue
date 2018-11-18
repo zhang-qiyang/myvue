@@ -1,4 +1,5 @@
 <!--1.模板：html-->
+<!--测试vue-->
 <template>
   <div id="app">
     <app-header v-on:titleChange="updateTitle($event)" v-bind:title="title"></app-header>
