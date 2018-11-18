@@ -23,7 +23,6 @@ export default {
         {name:"张启阳",position:"java开发",show:false},
         {name:"张启阳",position:"java开发",show:false},
         {name:"张启阳",position:"java开发",show:false},
-        {name:"张启阳",position:"java开发",show:false},
         {name:"张启阳",position:"java开发",show:false}
       ],
       title: "传递的是一个值(String,number,boolean)"
