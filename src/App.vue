@@ -1,9 +1,9 @@
 <!--1.模板：html-->
 <template>
   <div id="app">
-    <app-header></app-header>
+    <app-header v-on:titleChange="updateTitle($event)" v-bind:title="title"></app-header>
     <users v-bind:users="users"></users>
-    <app-footer></app-footer>
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 <!--2.行为：处理逻辑-->
@@ -25,7 +25,13 @@ export default {
         {name:"张启阳",position:"java开发",show:false},
         {name:"张启阳",position:"java开发",show:false},
         {name:"张启阳",position:"java开发",show:false}
-      ]
+      ],
+      title: "传递的是一个值(String,number,boolean)"
+    }
+  },
+  methods:{
+    updateTitle:function (title) {
+      this.title=title
     }
   },
   components:{

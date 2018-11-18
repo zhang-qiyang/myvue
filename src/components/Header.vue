@@ -1,6 +1,6 @@
 <template>
-  <header>
-    <h1>{{title}}</h1>
+  <header @click="changeTitle">
+    <h1>{{title1}} {{title}}</h1>
   </header>
 </template>
 
@@ -9,9 +9,22 @@
     name: "app-header",
     data(){
       return{
-        title: "Vue.js Demo"
+        title1: "Vue.js Demo"
+      }
+    },
+    props:{
+      title:{
+        type:String
+      }
+
+    },
+    methods:{
+      changeTitle:function () {
+        // this.title="changed"
+        this.$emit("titleChange","子向父组件传值")
       }
     }
+
   }
 </script>
 

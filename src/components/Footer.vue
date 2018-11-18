@@ -1,12 +1,18 @@
 <template>
     <footer>
-      <p>{{copyright}}</p>
+      <p>{{copyright}} {{title}}</p>
     </footer>
 </template>
 
 <script>
     export default {
         name: "app-footer",
+      props:{
+        title:{
+          type:String
+        }
+
+      },
       data(){
           return{
             copyright:"Copyright 2018 Vue Demo"
